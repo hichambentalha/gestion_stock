@@ -3,7 +3,6 @@ package com.stock.mvc.entities;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -28,14 +27,13 @@ public class CommandeFournisseur implements Serializable {
 	@JoinColumn(name="idFournisseur")
 	private Fournisseur fournisseur;
 	
-	
+
 	@OneToMany(mappedBy = "commandeFournisseur")
 	private List<LigneCommandeFournisseur> ligneCommandeFournisseurs;
 
 
 	public CommandeFournisseur() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 
